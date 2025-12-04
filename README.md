@@ -34,7 +34,8 @@ This open-source project empowers you to build and deploy professional web appli
 How to start? Simply login to Claude Code (or Cursor CLI), start Claudable, and describe what you want to build. That's it. There is no additional subscription cost for app builder.
 
 ## Features
-<img src="https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_cc_4_1080p.gif" alt="Claudable Demo" style="width: 100%; max-width: 800px;">
+
+![Claudable Demo](https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_cc_4_1080p.gif)
 
 - **Powerful Agent Performance**: Leverage the full power of Claude Code and Cursor CLI Agent capabilities
 - **Natural Language to Code**: Simply describe what you want to build, and Claudable generates production-ready Next.js code
@@ -49,10 +50,12 @@ How to start? Simply login to Claude Code (or Cursor CLI), start Claudable, and 
 ## Demo Examples
 
 ### Codex CLI Example
-<img src="https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_codex_1_1080p.gif" alt="Codex CLI Demo" style="width: 100%; max-width: 800px;">
+
+![Codex CLI Demo](https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_codex_1_1080p.gif)
 
 ### Qwen Code Example
-<img src="https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_qwen_1_1080p.gif" alt="Qwen Code Demo" style="width: 100%; max-width: 800px;">
+
+![Qwen Code Demo](https://storage.googleapis.com/claudable-assets/gif/Claudable_v2_qwen_1_1080p.gif)
 
 ## Supported AI Coding Agents
 
