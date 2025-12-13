@@ -1,4 +1,4 @@
-// Claudable - Prisma Schema (SQLite)
+// Frogable - Prisma Schema (SQLite)
 // Supports both development and production using SQLite
 
 generator client {

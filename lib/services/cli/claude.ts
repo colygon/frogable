@@ -718,7 +718,7 @@ export async function executeClaude(
     const response = query({
       prompt: instruction,
       options: {
-        cwd: absoluteProjectPath, // Work only in project folder (protects Claudable root)
+        cwd: absoluteProjectPath, // Work only in project folder (protects Frogable root)
         additionalDirectories: [absoluteProjectPath],
         model: resolvedModel,
         resume: sessionId, // Resume previous session

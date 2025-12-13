@@ -25,7 +25,7 @@ const MAX_PORT = 65_535;
 const FALLBACK_PORT_START = 3_100;
 const FALLBACK_PORT_END = 3_999;
 const DEFAULT_RANGE_SPAN = FALLBACK_PORT_END - FALLBACK_PORT_START;
-// Claudable (root web app) default port and small scan span to avoid preview pool
+// Frogable (root web app) default port and small scan span to avoid preview pool
 const DEFAULT_WEB_PORT = 3_000;
 const DEFAULT_WEB_SCAN_SPAN = 99; // scan up to 3099 at most
 const DEFAULT_WEB_MAX = DEFAULT_WEB_PORT + DEFAULT_WEB_SCAN_SPAN;

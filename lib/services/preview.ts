@@ -985,9 +985,9 @@ class PreviewManager {
 }
 
 const globalPreviewManager = globalThis as unknown as {
-  __claudable_preview_manager__?: PreviewManager;
+  __frogable_preview_manager__?: PreviewManager;
 };
 
 export const previewManager: PreviewManager =
-  globalPreviewManager.__claudable_preview_manager__ ??
-  (globalPreviewManager.__claudable_preview_manager__ = new PreviewManager());
+  globalPreviewManager.__frogable_preview_manager__ ??
+  (globalPreviewManager.__frogable_preview_manager__ = new PreviewManager());

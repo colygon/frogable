@@ -43,6 +43,6 @@
   "exclude": [
     "node_modules",
     "data/projects",
-    "external_Claudable"
+    "external_Frogable"
   ]
 }

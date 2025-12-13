@@ -122,20 +122,20 @@ class WebSocketManager {
 
 declare global {
   // eslint-disable-next-line no-var
-  var __claudable_ws_manager__: WebSocketManager | undefined;
+  var __frogable_ws_manager__: WebSocketManager | undefined;
   // eslint-disable-next-line no-var
-  var __claudable_ws_heartbeat__: NodeJS.Timeout | undefined;
+  var __frogable_ws_heartbeat__: NodeJS.Timeout | undefined;
 }
 
 export const websocketManager: WebSocketManager =
-  globalThis.__claudable_ws_manager__ ?? (globalThis.__claudable_ws_manager__ = new WebSocketManager());
+  globalThis.__frogable_ws_manager__ ?? (globalThis.__frogable_ws_manager__ = new WebSocketManager());
 
 export function ensureHeartbeat(): void {
-  if (globalThis.__claudable_ws_heartbeat__) {
+  if (globalThis.__frogable_ws_heartbeat__) {
     return;
   }
 
-  globalThis.__claudable_ws_heartbeat__ = setInterval(() => {
+  globalThis.__frogable_ws_heartbeat__ = setInterval(() => {
     websocketManager.pruneDeadConnections();
   }, 30_000);
 }

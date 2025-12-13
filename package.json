@@ -1,5 +1,5 @@
 {
-  "name": "claudable",
+  "name": "frogable",
   "version": "2.0.0",
   "description": "AI-Powered Web App Builder - Build apps with natural language using Claude Code, Cursor, and more",
   "private": true,
@@ -72,15 +72,15 @@
     "no-code",
     "low-code"
   ],
-  "author": "Claudable Team",
+  "author": "Frogable Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/claudable.git"
+    "url": "https://github.com/yourusername/frogable.git"
   },
   "build": {
-    "appId": "com.claudable.desktop",
-    "productName": "Claudable",
+    "appId": "com.frogable.desktop",
+    "productName": "Frogable",
     "files": [
       "electron/**/*",
       ".next/standalone/**/*",

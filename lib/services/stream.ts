@@ -133,6 +133,6 @@ export class StreamManager {
 }
 
 // Export Singleton instance (stable across HMR and route module reloads)
-const g = globalThis as unknown as { __claudable_stream_mgr__?: StreamManager };
+const g = globalThis as unknown as { __frogable_stream_mgr__?: StreamManager };
 export const streamManager: StreamManager =
-  g.__claudable_stream_mgr__ ?? (g.__claudable_stream_mgr__ = StreamManager.getInstance());
+  g.__frogable_stream_mgr__ ?? (g.__frogable_stream_mgr__ = StreamManager.getInstance());

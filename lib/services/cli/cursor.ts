@@ -2,7 +2,7 @@
  * Cursor Agent CLI service (Node.js adaptation of the original Python adapter).
  *
  * The goal is to stay close to the behaviour implemented in
- * apps/api/app/services/cli/adapters/cursor_agent.py from the main Claudable
+ * apps/api/app/services/cli/adapters/cursor_agent.py from the main Frogable
  * repository while keeping the implementation straightforward.
  */
 

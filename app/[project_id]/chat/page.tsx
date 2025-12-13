@@ -2312,7 +2312,7 @@ const persistProjectPreferences = useCallback(
                   runAct(message, images);
                 }}
                 disabled={isRunning}
-                placeholder={mode === 'act' ? "Ask Claudable..." : "Chat with Claudable..."}
+                placeholder={mode === 'act' ? "Ask Frogable..." : "Chat with Frogable..."}
                 mode={mode}
                 onModeChange={setMode}
                 projectId={projectId}
@@ -2743,7 +2743,7 @@ const persistProjectPreferences = useCallback(
                         animate={{ opacity: 1, scale: 1 }}
                         className="text-center"
                       >
-                        {/* Claudable Symbol with loading spinner */}
+                        {/* Frogable Symbol with loading spinner */}
                         <div className="w-40 h-40 mx-auto mb-6 relative">
                           <div 
                             className="w-full h-full"
@@ -2806,7 +2806,7 @@ const persistProjectPreferences = useCallback(
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
                       >
-                        {/* Claudable Symbol */}
+                        {/* Frogable Symbol */}
                         {hasActiveRequests ? (
                           <>
                             <div className="w-40 h-40 mx-auto mb-6 relative">
@@ -2865,7 +2865,7 @@ const persistProjectPreferences = useCallback(
                               onClick={!isRunning && !isStartingPreview ? start : undefined}
                               className={`w-40 h-40 mx-auto mb-6 relative ${!isRunning && !isStartingPreview ? 'cursor-pointer group' : ''}`}
                             >
-                              {/* Claudable Symbol with rotating animation when starting */}
+                              {/* Frogable Symbol with rotating animation when starting */}
                               <MotionDiv
                                 className="w-full h-full"
                                 animate={isStartingPreview ? { rotate: 360 } : {}}

@@ -1,7 +1,7 @@
 /**
  * Cursor CLI model definitions and helpers. The Cursor Agent currently exposes a
  * small, well-defined set of models. We mirror the Python adapter from the
- * original Claudable repository to keep behaviour aligned across runtimes.
+ * original Frogable repository to keep behaviour aligned across runtimes.
  */
 
 export interface CursorModelDefinition {

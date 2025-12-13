@@ -1,6 +1,6 @@
-# Claudable
+# Frogable
 
-<img src="https://storage.googleapis.com/claudable-assets/Claudable.png" alt="Claudable" style="width: 100%;" />
+<img src="https://storage.googleapis.com/frogable-assets/Frogable.png" alt="Frogable" style="width: 100%;" />
 <div align="center">
 <h3>Connect CLI Agent • Build what you want • Deploy instantly</h3>
 </div>
@@ -14,31 +14,31 @@
 <a href="https://discord.gg/NJNbafHNQC">
 <img src="https://img.shields.io/badge/Discord-Join%20Community-7289da?style=flat&logo=discord&logoColor=white" alt="Join Discord Community">
 </a>
-<a href="https://github.com/opactorai/Claudable">
-<img src="https://img.shields.io/github/stars/opactorai/Claudable?style=flat&logo=github&logoColor=white&labelColor=181717&color=f9d71c" alt="GitHub Stars">
+<a href="https://github.com/opactorai/Frogable">
+<img src="https://img.shields.io/github/stars/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=f9d71c" alt="GitHub Stars">
 </a>
-<a href="https://github.com/opactorai/Claudable">
-<img src="https://img.shields.io/github/forks/opactorai/Claudable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="GitHub Forks">
+<a href="https://github.com/opactorai/Frogable">
+<img src="https://img.shields.io/github/forks/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="GitHub Forks">
 </a>
-<a href="https://github.com/opactorai/Claudable/blob/main/LICENSE">
-<img src="https://img.shields.io/github/license/opactorai/Claudable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="License">
+<a href="https://github.com/opactorai/Frogable/blob/main/LICENSE">
+<img src="https://img.shields.io/github/license/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="License">
 </a>
 </p>
 
-## What is Claudable?
+## What is Frogable?
 
-Claudable is a powerful Next.js-based web app builder that combines **C**laude Code's (Cursor CLI also supported!) advanced AI agent capabilities with **Lovable**'s simple and intuitive app building experience. Just describe your app idea - "I want a task management app with dark mode" - and watch as Claudable instantly generates the code and shows you a live preview of your working app. You can deploy your app to Vercel and integrate database with Supabase for free.
+Frogable is a powerful Next.js-based web app builder that combines **C**laude Code's (Cursor CLI also supported!) advanced AI agent capabilities with **Lovable**'s simple and intuitive app building experience. Just describe your app idea - "I want a task management app with dark mode" - and watch as Frogable instantly generates the code and shows you a live preview of your working app. You can deploy your app to Vercel and integrate database with Supabase for free.
 
 This open-source project empowers you to build and deploy professional web applications easily for **free**.
 
-How to start? Simply login to Claude Code (or Cursor CLI), start Claudable, and describe what you want to build. That's it. There is no additional subscription cost for app builder.
+How to start? Simply login to Claude Code (or Cursor CLI), start Frogable, and describe what you want to build. That's it. There is no additional subscription cost for app builder.
 
 ## Features
 
-![Claudable Demo](assets/gif/Claudable_v2_cc_4_1080p.gif)
+![Frogable Demo](assets/gif/Frogable_v2_cc_4_1080p.gif)
 
 - **Powerful Agent Performance**: Leverage the full power of Claude Code and Cursor CLI Agent capabilities
-- **Natural Language to Code**: Simply describe what you want to build, and Claudable generates production-ready Next.js code
+- **Natural Language to Code**: Simply describe what you want to build, and Frogable generates production-ready Next.js code
 - **Instant Preview**: See your changes immediately with hot-reload as AI builds your app
 - **Zero Setup, Instant Launch**: No complex sandboxes, no API key, no database headaches - just start building immediately
 - **Beautiful UI**: Generate beautiful UI with Tailwind CSS and shadcn/ui
@@ -51,15 +51,15 @@ How to start? Simply login to Claude Code (or Cursor CLI), start Claudable, and 
 
 ### Codex CLI Example
 
-![Codex CLI Demo](assets/gif/Claudable_v2_codex_1_1080p.gif)
+![Codex CLI Demo](assets/gif/Frogable_v2_codex_1_1080p.gif)
 
 ### Qwen Code Example
 
-![Qwen Code Demo](assets/gif/Claudable_v2_qwen_1_1080p.gif)
+![Qwen Code Demo](assets/gif/Frogable_v2_qwen_1_1080p.gif)
 
 ## Supported AI Coding Agents
 
-Claudable supports multiple AI coding agents, giving you the flexibility to choose the best tool for your needs:
+Frogable supports multiple AI coding agents, giving you the flexibility to choose the best tool for your needs:
 
 - **Claude Code** - Anthropic's advanced AI coding agent
 - **Codex CLI** - OpenAI's powerful coding agent
@@ -135,12 +135,12 @@ Before you begin, ensure you have the following installed:
 
 ## Quick Start
 
-Get Claudable running on your local machine in minutes:
+Get Frogable running on your local machine in minutes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/opactorai/Claudable.git
-cd Claudable
+git clone https://github.com/opactorai/Frogable.git
+cd Frogable
 
 # Install all dependencies
 npm install
@@ -154,7 +154,7 @@ Your application will be available at http://localhost:3000
 **Note**: Ports are automatically detected. If the default port is in use, the next available port will be assigned.
 
 ## Troubleshooting
-- **Database migration conflicts**: If you upgraded from a previous Claudable version and run into database errors, reset the Prisma database so it matches the latest schema:
+- **Database migration conflicts**: If you upgraded from a previous Frogable version and run into database errors, reset the Prisma database so it matches the latest schema:
   ```bash
   npm run prisma:reset
   ```
@@ -170,7 +170,7 @@ The `npm install` command automatically handles the complete setup:
 
 ### Desktop App (Electron)
 
-Build and run Claudable as a desktop application:
+Build and run Frogable as a desktop application:
 
 ```bash
 # Development mode
@@ -213,7 +213,7 @@ npm run clean       # Remove all dependencies
 
 ### Database Operations
 
-Claudable uses SQLite for local development. The database automatically initializes on first run.
+Frogable uses SQLite for local development. The database automatically initializes on first run.
 
 ## Troubleshooting
 
@@ -241,7 +241,7 @@ If you encounter the error: `Error output dangerously skip permissions cannot be
    whoami
    
    # Change ownership of project directory to current user
-   sudo chown -R $(whoami):$(whoami) ~/Claudable
+   sudo chown -R $(whoami):$(whoami) ~/Frogable
    ```
 3. If using WSL, make sure you're running Claude Code from your user account, not root
 4. Verify Claude Code installation permissions:
@@ -285,4 +285,4 @@ We're working hard to deliver the features you've been asking for. Stay tuned!
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=opactorai/Claudable&type=Date)](https://www.star-history.com/#opactorai/Claudable&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=opactorai/Frogable&type=Date)](https://www.star-history.com/#opactorai/Frogable&Date)
