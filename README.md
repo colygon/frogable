@@ -1,6 +1,6 @@
 # Frogable
 
-<img src="https://storage.googleapis.com/frogable-assets/Frogable.png" alt="Frogable" style="width: 100%;" />
+<img src="public/Frogable_Icon.png" alt="Frogable" style="width: 100%;" />
 <div align="center">
 <h3>Connect CLI Agent • Build what you want • Deploy instantly</h3>
 </div>
@@ -14,14 +14,14 @@
 <a href="https://discord.gg/NJNbafHNQC">
 <img src="https://img.shields.io/badge/Discord-Join%20Community-7289da?style=flat&logo=discord&logoColor=white" alt="Join Discord Community">
 </a>
-<a href="https://github.com/opactorai/Frogable">
-<img src="https://img.shields.io/github/stars/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=f9d71c" alt="GitHub Stars">
+<a href="https://github.com/colygon/frogable">
+<img src="https://img.shields.io/github/stars/colygon/frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=f9d71c" alt="GitHub Stars">
 </a>
-<a href="https://github.com/opactorai/Frogable">
-<img src="https://img.shields.io/github/forks/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="GitHub Forks">
+<a href="https://github.com/colygon/frogable">
+<img src="https://img.shields.io/github/forks/colygon/frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="GitHub Forks">
 </a>
-<a href="https://github.com/opactorai/Frogable/blob/main/LICENSE">
-<img src="https://img.shields.io/github/license/opactorai/Frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="License">
+<a href="https://github.com/colygon/frogable/blob/main/LICENSE">
+<img src="https://img.shields.io/github/license/colygon/frogable?style=flat&logo=github&logoColor=white&labelColor=181717&color=181717" alt="License">
 </a>
 </p>
 
@@ -139,7 +139,7 @@ Get Frogable running on your local machine in minutes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/opactorai/Frogable.git
+git clone https://github.com/colygon/frogable.git
 cd Frogable
 
 # Install all dependencies
@@ -285,4 +285,4 @@ We're working hard to deliver the features you've been asking for. Stay tuned!
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=opactorai/Frogable&type=Date)](https://www.star-history.com/#opactorai/Frogable&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=colygon/frogable&type=Date)](https://www.star-history.com/#colygon/frogable&Date)
