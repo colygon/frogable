@@ -7,7 +7,14 @@ import dynamic from 'next/dynamic';
 import { FaCode, FaDesktop, FaMobileAlt, FaPlay, FaStop, FaSync, FaCog, FaRocket, FaFolder, FaFolderOpen, FaFile, FaFileCode, FaCss3Alt, FaHtml5, FaJs, FaReact, FaPython, FaDocker, FaGitAlt, FaMarkdown, FaDatabase, FaPhp, FaJava, FaRust, FaVuejs, FaLock, FaHome, FaChevronUp, FaChevronRight, FaChevronDown, FaArrowLeft, FaArrowRight, FaRedo } from 'react-icons/fa';
 import { SiTypescript, SiGo, SiRuby, SiSvelte, SiJson, SiYaml, SiCplusplus } from 'react-icons/si';
 import { VscJson } from 'react-icons/vsc';
+import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import ChatLog from '@/components/chat/ChatLog';
+import PreviewPane from '@/components/PreviewPane';
+
+const Terminal = dynamic(() => import('@/components/Terminal'), {
+  ssr: false,
+  loading: () => <div className="h-full bg-[#1e1e1e] flex items-center justify-center text-white">Loading terminal...</div>
+});
 import { ProjectSettings } from '@/components/settings/ProjectSettings';
 import ChatInput from '@/components/chat/ChatInput';
 import { ChatErrorBoundary } from '@/components/ErrorBoundary';
@@ -239,6 +246,7 @@ export default function ChatPage() {
   const [mode, setMode] = useState<'act' | 'chat'>('act');
   const [isRunning, setIsRunning] = useState(false);
   const [isSseFallbackActive, setIsSseFallbackActive] = useState(false);
+  const [viewMode, setViewMode] = useState<'preview' | 'terminal' | 'split'>('preview');
   const [showPreview, setShowPreview] = useState(true);
   const [deviceMode, setDeviceMode] = useState<'desktop'|'mobile'>('desktop');
   const [showGlobalSettings, setShowGlobalSettings] = useState(false);
@@ -2341,28 +2349,52 @@ const persistProjectPreferences = useCallback(
                   <div className="flex items-center bg-gray-100 rounded-lg p-1">
                     <button
                       className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                        showPreview 
-                          ? 'bg-white text-gray-900 ' 
+                        viewMode === 'preview'
+                          ? 'bg-white text-gray-900 '
                           : 'text-gray-600 hover:text-gray-900 '
                       }`}
-                      onClick={() => setShowPreview(true)}
+                      onClick={() => setViewMode('preview')}
+                      title="Preview only"
                     >
                       <span className="w-4 h-4 flex items-center justify-center"><FaDesktop size={16} /></span>
                     </button>
                     <button
                       className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                        !showPreview 
-                          ? 'bg-white text-gray-900 ' 
+                        viewMode === 'split'
+                          ? 'bg-white text-gray-900 '
+                          : 'text-gray-600 hover:text-gray-900 '
+                      }`}
+                      onClick={() => setViewMode('split')}
+                      title="Split view"
+                    >
+                      <span className="w-4 h-4 flex items-center justify-center text-[10px]">⫷⫸</span>
+                    </button>
+                    <button
+                      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                        viewMode === 'terminal'
+                          ? 'bg-white text-gray-900 '
+                          : 'text-gray-600 hover:text-gray-900 '
+                      }`}
+                      onClick={() => setViewMode('terminal')}
+                      title="Terminal only"
+                    >
+                      <span className="w-4 h-4 flex items-center justify-center"><FaCode size={14} /></span>
+                    </button>
+                    <button
+                      className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                        !showPreview
+                          ? 'bg-white text-gray-900 '
                           : 'text-gray-600 hover:text-gray-900 '
                       }`}
                       onClick={() => setShowPreview(false)}
+                      title="Code editor"
                     >
                       <span className="w-4 h-4 flex items-center justify-center"><FaCode size={16} /></span>
                     </button>
                   </div>
                   
                   {/* Center Controls */}
-                  {showPreview && previewUrl && (
+                  {(viewMode === 'preview' || viewMode === 'split') && previewUrl && (
                     <div className="flex items-center gap-3">
                       {/* Route Navigation */}
                       <div className="h-9 flex items-center bg-gray-100 rounded-lg px-3 border border-gray-200 ">
@@ -2639,8 +2671,44 @@ const persistProjectPreferences = useCallback(
               
               {/* Content Area */}
               <div className="flex-1 relative bg-black overflow-hidden">
+                {/* View Mode Based Rendering */}
+                {viewMode === 'preview' ? (
+                  <PreviewPane
+                    previewUrl={previewUrl}
+                    deviceMode={deviceMode}
+                    iframeRef={iframeRef}
+                    isStartingPreview={isStartingPreview}
+                    previewInitializationMessage={previewInitializationMessage}
+                    hasActiveRequests={hasActiveRequests}
+                    isRunning={isRunning}
+                    activeBrandColor={activeBrandColor}
+                    start={start}
+                  />
+                ) : viewMode === 'terminal' ? (
+                  <Terminal projectId={projectId} />
+                ) : viewMode === 'split' ? (
+                  <PanelGroup direction="horizontal" className="h-full">
+                    <Panel defaultSize={50} minSize={30}>
+                      <PreviewPane
+                        previewUrl={previewUrl}
+                        deviceMode={deviceMode}
+                        iframeRef={iframeRef}
+                        isStartingPreview={isStartingPreview}
+                        previewInitializationMessage={previewInitializationMessage}
+                        hasActiveRequests={hasActiveRequests}
+                        isRunning={isRunning}
+                        activeBrandColor={activeBrandColor}
+                        start={start}
+                      />
+                    </Panel>
+                    <PanelResizeHandle className="w-1 bg-gray-300 hover:bg-blue-500 transition-colors" />
+                    <Panel defaultSize={50} minSize={30}>
+                      <Terminal projectId={projectId} />
+                    </Panel>
+                  </PanelGroup>
+                ) : null}
                 <AnimatePresence initial={false}>
-                  {showPreview ? (
+                  {showPreview && false ? (
                   <MotionDiv
                     key="preview"
                     initial={{ opacity: 0 }}
